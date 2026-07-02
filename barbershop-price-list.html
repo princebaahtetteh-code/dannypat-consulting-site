@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fade & Blade Barbershop — Price List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#1b1814;
+    --charcoal-2:#241f1a;
+    --cream:#f3ead9;
+    --gold:#c79a4b;
+    --gold-light:#e2c180;
+    --rust:#9a4a2c;
+    --line:rgba(243,234,217,0.18);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--charcoal);
+    color:var(--cream);
+    font-family:'Oswald', sans-serif;
+    display:flex;
+    justify-content:center;
+    padding:48px 20px;
+  }
+  .sheet{
+    width:100%;
+    max-width:680px;
+    background:var(--charcoal-2);
+    border:1px solid var(--line);
+    border-radius:2px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 30px 60px rgba(0,0,0,0.45);
+  }
+  .pole{
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:10px;
+    background:repeating-linear-gradient(
+      -45deg,
+      var(--rust) 0 18px,
+      var(--cream) 18px 36px,
+      var(--charcoal-2) 36px 54px
+    );
+  }
+  .inner{ padding:52px 48px 44px; }
+  header{
+    text-align:center;
+    margin-bottom:36px;
+  }
+  .eyebrow{
+    font-size:11px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 10px;
+  }
+  h1{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:58px;
+    letter-spacing:3px;
+    margin:0;
+    line-height:1;
+    color:var(--cream);
+  }
+  h1 span{ color:var(--gold); }
+  .tagline{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color:var(--gold-light);
+    font-size:18px;
+    margin:10px 0 0;
+  }
+  .divider{
+    width:64px;
+    height:2px;
+    background:var(--gold);
+    margin:26px auto;
+  }
+  .category{ margin-bottom:8px; }
+  .category h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:24px;
+    letter-spacing:2px;
+    color:var(--gold);
+    margin:0 0 14px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .category h2::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+  ul.items{
+    list-style:none;
+    margin:0 0 34px;
+    padding:0;
+  }
+  ul.items li{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    padding:11px 0;
+    border-bottom:1px dotted var(--line);
+    font-size:16px;
+  }
+  ul.items li:last-child{ border-bottom:none; }
+  .name{ color:var(--cream); }
+  .name small{
+    display:block;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color:#a89a82;
+    font-size:13px;
+    margin-top:2px;
+  }
+  .price{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:20px;
+    letter-spacing:1px;
+    color:var(--gold-light);
+    white-space:nowrap;
+    padding-left:16px;
+  }
+  .price .cur{
+    font-family:'Oswald', sans-serif;
+    font-size:11px;
+    color:var(--gold);
+    letter-spacing:1px;
+    margin-right:3px;
+    vertical-align:2px;
+  }
+  .essentials{
+    background:var(--charcoal);
+    border:1px solid var(--gold);
+    border-radius:2px;
+    padding:18px 22px;
+    margin-bottom:36px;
+  }
+  .essentials h3{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:18px;
+    letter-spacing:2px;
+    color:var(--gold);
+    margin:0 0 4px;
+  }
+  .essentials p{
+    margin:0 0 14px;
+    font-size:12.5px;
+    color:#a89a82;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+  }
+  footer{
+    text-align:center;
+    border-top:1px solid var(--line);
+    padding-top:22px;
+    margin-top:8px;
+  }
+  footer p{
+    margin:4px 0;
+    font-size:13px;
+    color:#a89a82;
+    letter-spacing:1px;
+  }
+  footer .shop{
+    color:var(--gold-light);
+    font-family:'Bebas Neue', sans-serif;
+    font-size:16px;
+    letter-spacing:2px;
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="pole"></div>
+    <div class="inner">
+      <header>
+        <p class="eyebrow">Est. since the first clean fade</p>
+        <h1>FADE <span>&amp;</span> BLADE</h1>
+        <p class="tagline">Sharp lines. Honest prices.</p>
+      </header>
+
+      <div class="essentials">
+        <h3>Quick essentials — from 10 cedis</h3>
+        <p>Our most affordable services, done right every time</p>
+        <ul class="items" style="margin-bottom:0;">
+          <li>
+            <span class="name">Hair dye only</span>
+            <span class="price"><span class="cur">GH₵</span>10</span>
+          </li>
+          <li>
+            <span class="name">Shape up</span>
+            <span class="price"><span class="cur">GH₵</span>10</span>
+          </li>
+          <li>
+            <span class="name">Shaving</span>
+            <span class="price"><span class="cur">GH₵</span>10</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="category">
+        <h2>Cuts</h2>
+        <ul class="items">
+          <li>
+            <span class="name">Classic haircut<small>Clipper or scissor cut, clean finish</small></span>
+            <span class="price"><span class="cur">GH₵</span>20</span>
+          </li>
+          <li>
+            <span class="name">Skin fade<small>Tapered down to the skin, blended</small></span>
+            <span class="price"><span class="cur">GH₵</span>25</span>
+          </li>
+          <li>
+            <span class="name">Haircut + shape up</span>
+            <span class="price"><span class="cur">GH₵</span>25</span>
+          </li>
+          <li>
+            <span class="name">Kids haircut<small>12 and under</small></span>
+            <span class="price"><span class="cur">GH₵</span>15</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>Beard &amp; shave</h2>
+        <ul class="items">
+          <li>
+            <span class="name">Shaving</span>
+            <span class="price"><span class="cur">GH₵</span>10</span>
+          </li>
+          <li>
+            <span class="name">Beard trim &amp; line up</span>
+            <span class="price"><span class="cur">GH₵</span>15</span>
+          </li>
+          <li>
+            <span class="name">Hot towel shave<small>Straight razor, hot towel finish</small></span>
+            <span class="price"><span class="cur">GH₵</span>20</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>Colour</h2>
+        <ul class="items">
+          <li>
+            <span class="name">Hair dye only</span>
+            <span class="price"><span class="cur">GH₵</span>10</span>
+          </li>
+          <li>
+            <span class="name">Haircut + dye</span>
+            <span class="price"><span class="cur">GH₵</span>30</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>Full package</h2>
+        <ul class="items">
+          <li>
+            <span class="name">Haircut + beard + shave<small>The complete refresh</small></span>
+            <span class="price"><span class="cur">GH₵</span>40</span>
+          </li>
+        </ul>
+      </div>
+
+      <footer>
+        <p class="shop">Fade &amp; Blade Barbershop</p>
+        <p>Walk-ins welcome &bull; Appointments preferred</p>
+        <p>Prices in Ghana cedis (GH₵)</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
